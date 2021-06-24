@@ -27,13 +27,13 @@ function Moreinfo() {
         professionals to discuss weight problems more objectively with their
         patients. BMI was designed to be used as a simple means of classifying
         average sedentary (physically inactive) populations, with an average
-        body composition.[9] For such individuals, the value recommendations as
-        of 2014 are as follows: a BMI from 18.5 up to 25 kg/m2 may indicate
-        optimal weight, a BMI lower than 18.5 suggests the person is
-        underweight, a number from 25 up to 30 may indicate the person is
-        overweight, and a number from 30 upwards suggests the person is obese.
-        Lean male athletes often have a high muscle-to-fat ratio and therefore a
-        BMI that is misleadingly high relative to their body-fat percentage.
+        body composition. For such individuals, the value recommendations as of
+        2014 are as follows: a BMI from 18.5 up to 25 kg/m2 may indicate optimal
+        weight, a BMI lower than 18.5 suggests the person is underweight, a
+        number from 25 up to 30 may indicate the person is overweight, and a
+        number from 30 upwards suggests the person is obese. Lean male athletes
+        often have a high muscle-to-fat ratio and therefore a BMI that is
+        misleadingly high relative to their body-fat percentage.
       </p>
     </div>
   );

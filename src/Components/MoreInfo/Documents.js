@@ -1,15 +1,19 @@
 import React from "react";
+import chart from "./BMI_chart.png";
 
 function Documents() {
   return (
     <div className="documentscontainer">
       {" "}
-      <h1>Body Mass Index</h1>
-      <p>
+      <h1 style={{ textAlign: "center" }}>Body Mass Index</h1>
+      <p style={{ display: "flex", alignItems: "center" }}>
         <img
-          src="/BMI_chart.png"
+          src={chart}
           alt=""
-          style={{ width: "600px", height: "300px" }}
+          style={{
+            width: "90vh",
+            height: "50vh",
+          }}
         />
       </p>
     </div>

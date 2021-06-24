@@ -5,7 +5,7 @@ function Info() {
     <div>
       <div className="infomaincontainer">
         <div className="infotextcontainer">
-          <h1> WTF BMI?</h1>
+          <h1 style={{ textAlign: "center" }}> What's the BMI?</h1>
           <p>
             {" "}
             Body mass index (BMI) is a measure of body fat based on height and

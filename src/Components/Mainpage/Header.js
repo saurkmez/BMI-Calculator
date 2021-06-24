@@ -23,7 +23,7 @@ function Header() {
             </NavLink>
             <NavLink to="/Recipes" className="route">
               <li>
-                <h3>Diet Lists</h3>
+                <h3>Healthy Recipes</h3>
               </li>
             </NavLink>
           </ul>

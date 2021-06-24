@@ -3,25 +3,17 @@ import { Usercontext } from "../Usercontext";
 import { NavLink } from "react-router-dom";
 
 function Calculate() {
-  const { weight, setWeight, height, setHeight, result, setResult } =
-    useContext(Usercontext);
-
-  const [popup, setPopUp] = useState(false);
-
-  const resultHandler = (e) => {
-    e.preventDefault();
-    const bmiraw = weight / ((height * height) / 10000);
-    const bmi = bmiraw.toFixed(2);
-
-    if (isNaN(bmi)) {
-      setResult("Please!");
-    } else {
-      setResult(bmi);
-      setPopUp(!popup);
-    }
-    setWeight("");
-    setHeight("");
-  };
+  const {
+    weight,
+    setWeight,
+    height,
+    setHeight,
+    result,
+    setResult,
+    resultHandler,
+    popup,
+    setPopUp,
+  } = useContext(Usercontext);
 
   const heightHandler = (e) => {
     if (isNaN(height)) {
@@ -45,9 +37,25 @@ function Calculate() {
     <div>
       <div className="calculatemaincontainer">
         <div className="formcontainer">
-          <form style={{ listStyle: "none" }}>
+          <form
+            style={{
+              listStyle: "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <li>
-              <h2 style={{ margin: "0", textAlign: "left" }}>Calculator</h2>
+              <h2
+                style={{
+                  margin: "0",
+                  textAlign: "left",
+                  fontWeight: "1000",
+                  textAlign: "center",
+                }}
+              >
+                Calculator
+              </h2>
             </li>
 
             <li>
@@ -57,7 +65,12 @@ function Calculate() {
                 onChange={heightHandler}
                 value={height}
                 placeholder="Your height as cm"
-                style={{ border: "1px solid black", width: "100%" }}
+                style={{
+                  border: "0",
+                  outline: "none",
+                  borderRadius: "10px",
+                  width: "100%",
+                }}
                 className="inputs"
               />
             </li>
@@ -69,21 +82,36 @@ function Calculate() {
                 onChange={weightHandler}
                 value={weight}
                 placeholder="Your weight as kg"
-                style={{ border: "1px solid black", width: "100%" }}
+                className="inputs"
+                style={{
+                  border: "0",
+                  borderRadius: "10px",
+                  outline: "none",
+                  width: "100%",
+                }}
               />
             </li>
             <li>
-              <button onClick={resultHandler}>Calculate</button>
+              <button onClick={resultHandler} className="button">
+                Calculate
+              </button>
             </li>
+            <li>Show Result:</li>
             <li>
-              Show Result:
               <div className="resultcontainer">{result}</div>
             </li>
             <NavLink to="/Recipes" className="route">
               <li
-                style={{ fontSize: "10px", display: popup ? "block" : "none" }}
+                style={{
+                  fontSize: "10px",
+                  display: popup ? "block" : "none",
+                  color: "green",
+
+                  marginTop: "10%",
+                  textAlign: "center",
+                }}
               >
-                More info and diet list
+                Get Healthy Recipes!
               </li>
             </NavLink>
           </form>
