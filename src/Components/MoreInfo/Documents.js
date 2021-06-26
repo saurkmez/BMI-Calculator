@@ -12,7 +12,7 @@ function Documents() {
           alt=""
           style={{
             width: "90vh",
-            height: "50vh",
+            height: "60vh",
           }}
         />
       </p>

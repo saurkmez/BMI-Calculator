@@ -26,19 +26,20 @@ const Recipes = () => {
   }, [query]);
 
   return (
-    <div className="recipes-container">
+    <div>
       <form className="search-form" onSubmit={submitHandler}>
         <input
           type="text"
           className="search-bar"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          placeholder="Food Calories"
         />
         <button type="submit" className="search-button">
           Search
         </button>
       </form>
-      <div>
+      <div className="recipes">
         {recipes.map((recipe) => (
           <Recipe
             key={recipe.recipe.label}

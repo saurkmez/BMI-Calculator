@@ -13,7 +13,7 @@ import Situation from "./Components/Mainpage/Situation";
 function App() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState();
   const [query, setQuery] = useState("chicken");
   const [search, setSearch] = useState("");
   const [popup, setPopUp] = useState(false);
@@ -27,8 +27,10 @@ function App() {
   const resultHandler = (e) => {
     e.preventDefault();
     const bmiraw = weight / ((height * height) / 10000);
-    const bmi = bmiraw.toFixed(2);
+    const bmistring = bmiraw.toFixed(2);
+    const bmi = parseFloat(bmistring);
 
+    console.log(typeof bmi);
     if (isNaN(bmi)) {
       setResult("Please!");
     } else {
@@ -76,7 +78,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="app">
       <HashRouter hashType="slash">
         <Usercontext.Provider value={providerValue}>
           <div className="header">
@@ -86,9 +88,9 @@ function App() {
             <div className="maincontainer">
               <Route path="/" exact component={Calculate} />
               <Route path="/" exact component={infopopup ? Situation : Info} />
+              <Route path="/Recipes" component={Recipes} />
               <Route path="/MoreInfo" component={Moreinfo} />
               <Route path="/MoreInfo" component={Documents} />
-              <Route path="/Recipes" component={Recipes} />
             </div>
           </Switch>
         </Usercontext.Provider>

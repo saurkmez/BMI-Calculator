@@ -13,6 +13,7 @@ function Calculate() {
     resultHandler,
     popup,
     setPopUp,
+    bmiint,
   } = useContext(Usercontext);
 
   const heightHandler = (e) => {
@@ -102,6 +103,7 @@ function Calculate() {
             </li>
             <NavLink to="/Recipes" className="route">
               <li
+                className="blink"
                 style={{
                   fontSize: "10px",
                   display: popup ? "block" : "none",
