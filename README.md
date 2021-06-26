@@ -16,4 +16,4 @@
 
 ## Demo
 
-alperurkmez.xyz
+https://bmicalculator-demo.netlify.app/#/
